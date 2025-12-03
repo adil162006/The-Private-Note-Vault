@@ -170,7 +170,7 @@ Create a `.env` file in the `backend` directory with the following variables:
 
 ```env
 # MongoDB Connection String
-MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?appName=note-vault
+MONGO_URI=mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?appName=your-app-name
 
 # Server Port
 PORT=4000
@@ -179,12 +179,7 @@ PORT=4000
 JWT_SECRET=your_jwt_secret_key_here
 ```
 
-**Example:**
-```env
-MONGO_URI=mongodb+srv://user:password@note-vault.2saoza6.mongodb.net/?appName=note-vault
-PORT=4000
-JWT_SECRET=your_key
-```
+
 
 ### Frontend Environment Setup
 
