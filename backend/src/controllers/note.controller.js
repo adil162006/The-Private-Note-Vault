@@ -43,11 +43,11 @@ export const deleteNote = async (req, res) => {
     }
 
     // Ensure the logged-in user owns this note
-    if (note.user.toString() !== req.user) {
+    if (note.user.toString() !== req.user._id.toString()) {
       return res.status(401).json({ message: "Not authorized" });
     }
 
-    await note.remove();
+    await Note.findByIdAndDelete(req.params.id);
 
     res.status(200).json({ message: "Note removed successfully" });
   } catch (error) {
